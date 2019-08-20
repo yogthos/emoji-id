@@ -57,9 +57,5 @@
                  remaining))
         bi))))
 
-(defn -main [option value]
-  (println
-   (condp = option
-     ":encode" (encode dict value)
-     ":decode" (decode dict value)
-     (str "unkown option" option "\nvalid options are: :encode or :decode"))))
+(defn -main [value]
+  (println ((if (re-matches #"\d+" value) encode decode) dict value)))
