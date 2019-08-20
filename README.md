@@ -16,8 +16,8 @@ The executable will be compiled in `target/emojify`
 
 ### Usage
 
-    emojify :encode 12345
+    emojify 12345
     🐳👄🐷
 
-    emojify :decode 🐳👄🐷
+    emojify 🐳👄🐷
     12345
